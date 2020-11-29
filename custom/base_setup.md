@@ -1,5 +1,3 @@
-
-
 ## Letter Head
 
 ```
@@ -13,14 +11,15 @@
 </div>
 ```
 
-## Website Settings
-- Favicon
-- Logo
-
+## Website
+- Website Settings
+  - Disable Signup
+  - Favicon
+- Navbar Settings
+  - Logo
 
 ## HR:
 
-- Employees
 - Branch = NMT - New Muslim Town
 - Departments
   -  All Departments
@@ -30,9 +29,6 @@
     - Human Resources - AMX
     - Legal - AMX
     - Management - AMX
-      - Lower Hierarchy - AMX
-      - Middle Hierarchy - AMX
-      - Upper Hierarchy - AMX
     - Marketing - AMX
     - Operations - AMX
       - Office Operations - AMX
@@ -55,10 +51,13 @@
 - Employee Grade
 - Holiday List
 - Employee Skill Map (Later)
+- Employees
 
 
 ## Payroll
 
+- Sallay Component
+  - Allowances - AL
 - Sallary Structure
   - Software Engineer
     - B: base * 0.6

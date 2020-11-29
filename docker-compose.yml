@@ -184,6 +184,7 @@ services:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - ADMIN_PASSWORD=${ADMIN_PASSWORD}
       - INSTALL_APPS=${INSTALL_APPS}
+      - FORCE=${FORCE}
     volumes:
       - sites-vol:/home/frappe/frappe-bench/sites:rw
 

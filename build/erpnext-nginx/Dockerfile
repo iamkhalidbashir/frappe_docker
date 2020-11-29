@@ -7,12 +7,14 @@ COPY build/erpnext-nginx/install_app.sh /install_app
 
 # RUN /install_app erpnext https://github.com/frappe/erpnext ${GIT_BRANCH}
 RUN /install_app erpnext https://github.com/iamkhalidbashir/erpnext ${GIT_BRANCH}
+RUN /install_app expense_request https://github.com/the-bantoo/expense_request main
 
 FROM frappe/frappe-nginx:${GIT_BRANCH}
 
 COPY --from=0 /home/frappe/frappe-bench/sites/ /var/www/html/
 COPY --from=0 /rsync /rsync
 RUN echo "erpnext" >> /var/www/html/apps.txt
+RUN echo -n "\nexpense_request" >> /var/www/html/apps.txt
 
 VOLUME [ "/assets" ]
 
