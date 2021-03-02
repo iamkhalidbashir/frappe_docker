@@ -37,7 +37,6 @@ services:
       - FRAPPE_PY_PORT=8000
       - FRAPPE_SOCKETIO=frappe-socketio
       - SOCKETIO_PORT=9000
-      - PASS_MAX_DAYS
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.erpnext-nginx.rule=Host(${SITES})"
@@ -65,7 +64,6 @@ services:
       - REDIS_SOCKETIO=redis-socketio:6379
       - SOCKETIO_PORT=9000
       - AUTO_MIGRATE=1
-      - PASS_MAX_DAYS
     volumes:
       - sites-vol:/home/frappe/frappe-bench/sites:rw
       - assets-vol:/home/frappe/frappe-bench/sites/assets:rw
@@ -87,8 +85,6 @@ services:
       dockerfile: build/erpnext-worker/Dockerfile
     restart: always
     command: worker
-    environment:
-      - PASS_MAX_DAYS
     depends_on:
       - redis-queue
       - redis-cache
@@ -106,7 +102,6 @@ services:
     command: worker
     environment:
       - WORKER_TYPE=short
-      - PASS_MAX_DAYS
     depends_on:
       - redis-queue
       - redis-cache
@@ -124,7 +119,6 @@ services:
     command: worker
     environment:
       - WORKER_TYPE=long
-      - PASS_MAX_DAYS
     depends_on:
       - redis-queue
       - redis-cache
@@ -140,8 +134,6 @@ services:
       dockerfile: build/erpnext-worker/Dockerfile
     restart: always
     command: schedule
-    environment:
-      - PASS_MAX_DAYS
     depends_on:
       - redis-queue
       - redis-cache
@@ -193,7 +185,6 @@ services:
       - ADMIN_PASSWORD=${ADMIN_PASSWORD}
       - INSTALL_APPS=${INSTALL_APPS}
       - FORCE=${FORCE}
-      - PASS_MAX_DAYS
     volumes:
       - sites-vol:/home/frappe/frappe-bench/sites:rw
 
