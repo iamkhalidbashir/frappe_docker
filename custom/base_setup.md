@@ -86,6 +86,16 @@
   - Sales Partner
     - Upwork
 
+## Retail
+
+- Customer Groups
+  - 
+
+
+# Accoutning
+- Mode of Payments
+  - Bank Transfer
+
 ## Accounts
 - Banks
   - HBL
@@ -96,13 +106,22 @@
 - Expenses
   - Upwork
 
+
+
 ## Form Customization
 - Expense Entry
 - Forms
   - Sales Invoice
     - Mandatory
       - Project
+  - Journal Entry
+    - Sale Invoice Reference
 - Sales Invoice
   - Custom Script
   - Server SCript
-- Payment Entry Script
+- Payment Entry
+  - Payment Entry Script
+  - Mandatory
+    - Mode of payment
+    - Cost Center
+    - Project
